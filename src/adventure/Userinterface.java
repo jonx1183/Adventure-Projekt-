@@ -4,27 +4,31 @@ import java.util.Scanner;
 
 public class Userinterface {
 
+  boolean Running = true;
+
   public void Interface() {
 
-    boolean Running = true;
+
     Scanner scan = new Scanner(System.in);
     Game player = new Game();
-    Map CurrentRoom = new Map();
+    Map map = new Map();
+    map.Rooms();
 
+    Room CurrentRoom = map.getCurrentRoom();
+
+    while (Running) {
 
     String choice;
     String newloc = "\n" + player.getPLayername() + ", " + "You walked into a new location";
     choice = scan.nextLine();
 
 
-    while (Running) {
-
       switch (choice) {
         case "Go north":
           System.out.println("You are going North" + CurrentRoom);
           if (CurrentRoom.getNorth() != null) {
             System.out.println(newloc);
-            CurrentRoom.getNorth();
+            CurrentRoom = CurrentRoom.getNorth();
           } else {
             System.out.println("You can't go this way");
           }
@@ -33,7 +37,7 @@ public class Userinterface {
           System.out.println("You are going East" + CurrentRoom.getEast());
           if (CurrentRoom.getEast() != null) {
             System.out.println(newloc);
-            CurrentRoom.getEast();
+            CurrentRoom = CurrentRoom.getEast();
           } else {
             System.out.println("You can't go this way");
           }
@@ -42,7 +46,7 @@ public class Userinterface {
           System.out.println("You are going South" + CurrentRoom.getSouth());
           if (CurrentRoom.getSouth() != null) {
             System.out.println(newloc);
-            CurrentRoom.getSouth();
+            CurrentRoom = CurrentRoom.getSouth();
           } else {
             System.out.println("You can't go this way");
           }
@@ -51,7 +55,7 @@ public class Userinterface {
           System.out.println("You are going West" + CurrentRoom.getWest());
           if (CurrentRoom.getWest() != null) {
             System.out.println(newloc);
-            CurrentRoom.getWest();
+            CurrentRoom = CurrentRoom.getWest();
           } else {
             System.out.println("You can't go this way");
           }
@@ -67,8 +71,9 @@ public class Userinterface {
           break;
 
       }
-      Running = false;
+
     }
+
     }
 
     void Help () {
@@ -86,9 +91,10 @@ public class Userinterface {
     void Exit () {
 
       System.out.println("Thanks for playing :)");
-
-
+      Running = false;
 
     }
 
-}
+  }
+
+

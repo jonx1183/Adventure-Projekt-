@@ -2,23 +2,22 @@ package adventure;
 
 public class Map {
 
-  private Map CurrentRoom;
-  private String Name;
-  private String Description;
-  private Map North, South, West, East;
+  private Room CurrentRoom;
+
 
   public Map() {
 
   }
 
+
   public void Rooms() {
 
     //Room 1
 
-    Name = "Camp";
-    Description = "You start outside in the camp there is a bonfire, and its raining cats and dogs. You are cold and freezing, so you decide to move, you have now two opportunities to move, you can move East or South.";
+    String Name = "Camp";
+    String Description = "You start outside in the camp there is a bonfire, and its raining cats and dogs. You are cold and freezing, so you decide to move, you have now two opportunities to move, you can move East or South.";
 
-    Map Room1 = new Map(Name, Description);
+    Room Room1 = new Room(Name, Description);
 
 
     //Room 2
@@ -26,50 +25,50 @@ public class Map {
     Name = "Forrest";
     Description = "You walked East and entered a forrest, there is a lot of threes and spider web hanging from the threes, on the ground there is a lot stones and a swamp";
 
-    Map Room2 = new Map(Name, Description);
+    Room Room2 = new Room(Name, Description);
 
     //Room 3
 
     Name = "Cave";
     Description = "You walked East and entered a cave there is dark, and you choice to light up a tourch, you start looking around and see spider web in the corners and a trap door";
 
-    Map Room3 = new Map(Name, Description);
+    Room Room3 = new Room(Name, Description);
 
     //Room4
     Name = "Beach";
     Description = "You walked south and you now entered a beach, you are looking around and sees an entrance to the left side.";
 
-    Map Room4 = new Map(Name, Description);
+    Room Room4 = new Room(Name, Description);
 
     //Room5
     Name = "Secret room";
     Description = " Congratulations you entered the secret room";
 
-    Map Room5 = new Map(Name, Description);
+    Room Room5 = new Room(Name, Description);
 
     //Room 6
     Name = "Stairs";
     Description = "You walked down the stairs and there is tourches at the side of the wall, you keep moving down";
 
-    Map Room6 = new Map(Name, Description);
+    Room Room6 = new Room(Name, Description);
 
     //Room 7
     Name = "Cave";
     Description = "You walked into a cave there is dark, and spiderweb overall there is tourches on the wall there lights up the place";
 
-    Map Room7 = new Map(Name, Description);
+    Room Room7 = new Room(Name, Description);
 
     //Room 8
     Name = "Chamber";
     Description = "You entered a Chamber. there is spiderweb in the corners and bones on the floor and skeletons on the side wall";
 
-    Map Room8 = new Map(Name, Description);
+    Room Room8 = new Room(Name, Description);
 
     //Room 9
     Name = "Hallway";
     Description = "You entered a Hallway, there is Dimly lit";
 
-    Map Room9 = new Map(Name, Description);
+    Room Room9 = new Room(Name, Description);
 
     //Room1
     Room1.SetNorth(null);
@@ -129,68 +128,8 @@ public class Map {
 
   }
 
-  void Map(String Roomname, String RoomDescription) {
-    setName(Roomname);
-    setDescription(RoomDescription);
-
-  }
-  public Map getNorth(){
-    return North;
-  }
-  public void SetNorth(Map aNorth) {
-    this.North = aNorth;
-
-  }
-  public Map getSouth(){
-    return South;
-  }
-  public void setSouth(Map aSouth) {
-    this.South = aSouth;
-
-  }
-  public Map getEast() {
-    return East;
-  }
-  public void setEast(Map aEast) {
-    this.East = aEast;
-  }
-  public Map getWest() {
-
-    return West;
-  }
-  public void setWest(Map aWest) {
-    this.West = aWest;
-
-  }
-
-  public Map (String aName, String aDescription) {
-
-    this.Name = aName;
-    this.Description = aDescription;
-
-  }
-
-  public String getName() {
-    return Name;
-  }
-
-  public void setName(String aName) {
-    this.Name = aName;
-  }
-  public String getDescription() {
-    return Description;
-  }
-  public void setDescription(String aDescription) {
-    this.Description = aDescription;
-
-  }
-
-  @Override
-  public String toString() {
-    return "Room{" +
-        "Name='" + Name + '\'' +
-        ", Description='" + Description + '\'' +
-        '}';
+  public Room getCurrentRoom() {
+    return CurrentRoom;
   }
 
 }
