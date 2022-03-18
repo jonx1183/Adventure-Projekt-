@@ -1,11 +1,24 @@
 package adventure;
 
+import java.util.ArrayList;
+
 public class Room {
 
   private String Name;
   private String Description;
   private Room North, South, West, East;
+  private ArrayList<Items> items;
 
+  public ArrayList<Items> getItems(){
+    return items;
+  }
+
+  public void addItem(Items item) {
+    items.add(item);
+  }
+  public void removeItems(Items item) {
+    items.remove(items);
+  }
 
   public Room getNorth(){
     return North;
@@ -40,6 +53,7 @@ public class Room {
 
     this.Name = aName;
     this.Description = aDescription;
+    items = new ArrayList<>();
 
   }
 

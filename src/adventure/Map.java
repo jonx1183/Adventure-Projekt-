@@ -5,6 +5,7 @@ public class Map {
   private Room CurrentRoom;
 
 
+
   public Map() {
 
   }
@@ -27,6 +28,7 @@ public class Map {
 
     Room Room2 = new Room(Name, Description);
 
+
     //Room 3
 
     Name = "Cave";
@@ -39,6 +41,7 @@ public class Map {
     Description = "You walked south and you now entered a beach, you are looking around and sees an entrance to the left side.";
 
     Room Room4 = new Room(Name, Description);
+
 
     //Room5
     Name = "Secret room";
@@ -125,6 +128,19 @@ public class Map {
     Room9.setEast(null);
 
     CurrentRoom = Room1;
+
+    //Create items
+
+    Items Carrot = new Items("Carrot", "old and nasty");
+    Items Sword = new Items("Sword", "Rusty and old");
+    Items Unholy_armor = new Items("Congratulation", "You got the unholy armor");
+
+
+    //add items
+
+    Room2.addItem(Carrot);
+    Room3.addItem(Sword);
+    Room5.addItem(Unholy_armor);
 
   }
 
