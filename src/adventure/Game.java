@@ -25,9 +25,7 @@ public class Game {
   public String getPLayername(){
     return Playername;
   }
-  public void SetPLayername(Scanner scan){
-    this.Playername = scan.next();
-  }
+
 
   }
 

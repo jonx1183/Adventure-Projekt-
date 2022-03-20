@@ -5,7 +5,6 @@ public class Map {
   private Room CurrentRoom;
 
 
-
   public Map() {
 
   }
@@ -28,8 +27,7 @@ public class Map {
 
     Room Room2 = new Room(Name, Description);
 
-
-    //Room 3
+   //Room 3
 
     Name = "Cave";
     Description = "You walked East and entered a cave there is dark, and you choice to light up a tourch, you start looking around and see spider web in the corners and a trap door";
@@ -72,6 +70,7 @@ public class Map {
     Description = "You entered a Hallway, there is Dimly lit";
 
     Room Room9 = new Room(Name, Description);
+
 
     //Room1
     Room1.SetNorth(null);
@@ -131,9 +130,10 @@ public class Map {
 
     //Create items
 
-    Items Carrot = new Items("Carrot", "old and nasty");
-    Items Sword = new Items("Sword", "Rusty and old");
-    Items Unholy_armor = new Items("Congratulation", "You got the unholy armor");
+    Items Carrot = new Items("Carrot", "Rotten and soft");
+    Items Sword = new Items("\n Sword", "Rusty and old");
+    Items Unholy_armor = new Items("\n Congratulation", "You got the unholy armor");
+    Items Tourch = new Items("\n Tourch", "Bright and light");
 
 
     //add items
@@ -141,11 +141,13 @@ public class Map {
     Room2.addItem(Carrot);
     Room3.addItem(Sword);
     Room5.addItem(Unholy_armor);
+    Room6.addItem(Tourch);
 
-  }
+    }
 
   public Room getCurrentRoom() {
     return CurrentRoom;
   }
+
 
 }

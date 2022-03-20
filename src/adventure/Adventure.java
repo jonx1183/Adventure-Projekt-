@@ -18,7 +18,9 @@ public class Adventure {
     Userinterface userinterface = new Userinterface();
     userinterface.Interface();
 
-    Player player = new Player();
+
+
+
 
 
 

@@ -13,14 +13,17 @@ public class Userinterface {
     Game player = new Game();
     Map map = new Map();
     map.Rooms();
+    Player player1 = new Player();
+
+
 
     Room CurrentRoom = map.getCurrentRoom();
 
     while (Running) {
 
-    String choice;
-    String newloc = "\n" + player.getPLayername() + ", " + "You walked into a new location";
-    choice = scan.nextLine();
+      String choice;
+      String newloc = "\n" + player.getPLayername() + ", " + "You walked into a new location";
+      choice = scan.nextLine();
 
 
       switch (choice) {
@@ -63,6 +66,15 @@ public class Userinterface {
         case "Look":
           System.out.println("You are now looking around" + CurrentRoom);
           break;
+        case "Take":
+          System.out.println("You have picked up an item" + CurrentRoom.getItems());
+          break;
+        case "Drop":
+          System.out.println("You have dropped your item");
+          break;
+        case "inv":
+          System.out.println("You are now looking in your inventory: ");
+          break;
         case "Help":
           Help();
           break;
@@ -74,27 +86,32 @@ public class Userinterface {
 
     }
 
-    }
+  }
 
-    void Help () {
+  void Help() {
 
-      System.out.println("Welcome to the help menu");
-      System.out.println("You can write the following commands to play the game");
-      System.out.println("Look = looking around");
-      System.out.println("Type 'Go north' = to go north");
-      System.out.println("Type 'Go east' = to go east");
-      System.out.println("Type 'Go south' = to go south");
-      System.out.println("Type 'Go west' = to go west");
-      System.out.println("Type 'Go exit' = to exit the game");
-    }
+    System.out.println("Welcome to the help menu");
+    System.out.println("You can write the following commands to play the game");
+    System.out.println("Look = looking around and see if there is any items");
+    System.out.println("Take = to take an item");
+    System.out.println("Drop to drop an item");
+    System.out.println("inv to look in your inventoryu");
+    System.out.println("Type 'Go north' = to go north");
+    System.out.println("Type 'Go east' = to go east");
+    System.out.println("Type 'Go south' = to go south");
+    System.out.println("Type 'Go west' = to go west");
+    System.out.println("Type 'Go exit' = to exit the game");
+  }
 
-    void Exit () {
+  void Exit() {
 
-      System.out.println("Thanks for playing :)");
-      Running = false;
+    System.out.println("Thanks for playing :)");
+    Running = false;
 
-    }
 
   }
+
+
+}
 
 
