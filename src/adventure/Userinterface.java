@@ -1,5 +1,6 @@
 package adventure;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Userinterface {
@@ -14,6 +15,7 @@ public class Userinterface {
     Map map = new Map();
     map.Rooms();
     Player player1 = new Player();
+
 
 
     Room CurrentRoom = map.getCurrentRoom();
@@ -74,8 +76,12 @@ public class Userinterface {
           player1.addInventory(removedRoomItem);}
           break;
         case "Drop":
-          //Items removedRoomItem = CurrentRoom.removeItem("Carrot");
-          //System.out.println("You have dropped your item"  + removedRoomItem);
+          System.out.println("Do you want to drop your items");
+          name = scan.next();
+          Items DropItem = CurrentRoom.RemoveItems(name);
+          System.out.println("You have dropped" + DropItem);
+          if(DropItem != null){
+            player1.removeInventory(DropItem);}
           break;
         case "inv":
           System.out.println("You are now looking in your inventory: " + player1.getInventory());

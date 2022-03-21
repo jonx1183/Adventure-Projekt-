@@ -13,6 +13,10 @@ public class Player {
     inventory.add(items);
 
   }
+  public void removeInventory(Items items) {
+    inventory.remove(items);
+  }
+
 }
 
 

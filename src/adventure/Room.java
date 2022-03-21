@@ -16,10 +16,17 @@ public class Room {
   public void addItem(Items item) {
     items.add(item);
   }
-  public ArrayList<Items> removeItems() {
-    items.remove(items);
-    return items;
+  public Items RemoveItems(String name) {
+    for(int i = 0; i < items.size(); i++) {
+      Items temp = items.get(i);
+      if(temp.getname().equals(name)){
+        items.remove(temp);
+        return temp;
+      }
+    }
+    return null;
   }
+
 
   public Items removeItem(String name) {
     for(int i = 0; i < items.size(); i++) {
@@ -31,6 +38,7 @@ public class Room {
     }
     return null;
   }
+
 
   public Room getNorth(){
     return North;
