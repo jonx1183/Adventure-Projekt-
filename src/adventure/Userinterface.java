@@ -16,7 +16,6 @@ public class Userinterface {
     Player player1 = new Player();
 
 
-
     Room CurrentRoom = map.getCurrentRoom();
 
     while (Running) {
@@ -67,13 +66,19 @@ public class Userinterface {
           System.out.println("You are now looking around" + CurrentRoom);
           break;
         case "Take":
-          System.out.println("You have picked up an item" + CurrentRoom.getItems());
+          System.out.println("What do you want to pick up: ");
+          String name = scan.next();
+          Items removedRoomItem = CurrentRoom.removeItem(name);
+          System.out.println("You have picked up an item" + removedRoomItem);
+          if(removedRoomItem != null){
+          player1.addInventory(removedRoomItem);}
           break;
         case "Drop":
-          System.out.println("You have dropped your item");
+          //Items removedRoomItem = CurrentRoom.removeItem("Carrot");
+          //System.out.println("You have dropped your item"  + removedRoomItem);
           break;
         case "inv":
-          System.out.println("You are now looking in your inventory: ");
+          System.out.println("You are now looking in your inventory: " + player1.getInventory());
           break;
         case "Help":
           Help();
