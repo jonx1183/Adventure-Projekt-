@@ -1,6 +1,5 @@
 package adventure;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Userinterface {
@@ -70,15 +69,15 @@ public class Userinterface {
         case "Take":
           System.out.println("What do you want to pick up: ");
           String name = scan.next();
-          Items removedRoomItem = CurrentRoom.removeItem(name);
-          System.out.println("You have picked up an item" + removedRoomItem);
-          if(removedRoomItem != null){
-          player1.addInventory(removedRoomItem);}
+          Items AddItems = CurrentRoom.addItems(name);
+          System.out.println("You have picked up an item" + AddItems);
+          if(AddItems != null){
+          player1.addInventory(AddItems);}
           break;
         case "Drop":
           System.out.println("Do you want to drop your items");
           name = scan.next();
-          Items DropItem = CurrentRoom.RemoveItems(name);
+          Items DropItem = CurrentRoom.removeItem(name);
           System.out.println("You have dropped" + DropItem);
           if(DropItem != null){
             player1.removeInventory(DropItem);}

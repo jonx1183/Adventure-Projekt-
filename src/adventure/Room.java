@@ -16,11 +16,11 @@ public class Room {
   public void addItem(Items item) {
     items.add(item);
   }
-  public Items RemoveItems(String name) {
+  public Items addItems(String name) {
     for(int i = 0; i < items.size(); i++) {
       Items temp = items.get(i);
       if(temp.getname().equals(name)){
-        items.remove(temp);
+        items.add(temp);
         return temp;
       }
     }
