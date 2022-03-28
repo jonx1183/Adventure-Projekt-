@@ -11,7 +11,7 @@ public class Items {
 
     }
 
-    public void setName(String name) {
+      public void setName(String name) {
         this.name = name;
     }
 
@@ -29,6 +29,7 @@ public class Items {
         return description;
     }
 
+
     @Override
     public String toString() {
         return "Items{" +
@@ -37,6 +38,7 @@ public class Items {
             '}';
     }
 }
+
 
 
 

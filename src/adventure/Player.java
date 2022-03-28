@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Player {
 
-  private int health = 100;
+  private int HP = 100;
 
   private ArrayList<Items> inventory = new ArrayList<>();
 
@@ -19,14 +19,11 @@ public class Player {
     inventory.remove(items);
   }
 
-  public int setHealth(int health) {
-    this.health = health;
-    return health;
+
+  public int HP() {
+    return HP;
   }
 
-  public int getHealth() {
-    return health;
-  }
 
 }
 

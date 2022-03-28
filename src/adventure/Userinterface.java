@@ -15,8 +15,6 @@ public class Userinterface {
     map.Rooms();
     Player player1 = new Player();
 
-
-
     Room CurrentRoom = map.getCurrentRoom();
 
     while (Running) {
@@ -29,7 +27,6 @@ public class Userinterface {
       switch (choice) {
         case "Go north":
           System.out.println("You are going North" + CurrentRoom);
-          System.out.println("Your HP is: " + player1.getHealth());
           if (CurrentRoom.getNorth() != null) {
             System.out.println(newloc);
             CurrentRoom = CurrentRoom.getNorth();
@@ -39,7 +36,6 @@ public class Userinterface {
           break;
         case "Go east":
           System.out.println("You are going East" + CurrentRoom.getEast());
-          System.out.println("Your HP is: " + player1.getHealth());
           if (CurrentRoom.getEast() != null) {
             System.out.println(newloc);
             CurrentRoom = CurrentRoom.getEast();
@@ -49,7 +45,6 @@ public class Userinterface {
           break;
         case "Go south":
           System.out.println("You are going South" + CurrentRoom.getSouth());
-          System.out.println("Your HP is: " + player1.getHealth());
           if (CurrentRoom.getSouth() != null) {
             System.out.println(newloc);
             CurrentRoom = CurrentRoom.getSouth();
@@ -59,7 +54,6 @@ public class Userinterface {
           break;
         case "Go west":
           System.out.println("You are going West" + CurrentRoom.getWest());
-          System.out.println("Your HP is: " + player1.getHealth());
           if (CurrentRoom.getWest() != null) {
             System.out.println(newloc);
             CurrentRoom = CurrentRoom.getWest();
@@ -69,7 +63,6 @@ public class Userinterface {
           break;
         case "Look":
           System.out.println("You are now looking around" + CurrentRoom);
-          System.out.println("Your HP is: " + player1.getHealth());
           break;
         case "Take":
           System.out.println("What do you want to pick up: ");
@@ -90,6 +83,10 @@ public class Userinterface {
         case "inv":
           System.out.println("You are now looking in your inventory: " + player1.getInventory());
           break;
+        case "Equip":
+          System.out.println("You equiped an item");
+        case "Heal":
+
         case "Help":
           Help();
           break;

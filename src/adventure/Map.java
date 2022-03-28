@@ -135,7 +135,6 @@ public class Map {
     Items Unholy_armor = new Items("Congratulation", "You got the unholy armor");
     Items Tourch = new Items("Tourch", "Bright and light");
 
-
     //add items
 
     Room2.addItem(Carrot);
@@ -144,12 +143,14 @@ public class Map {
     Room6.addItem(Tourch);
 
     //Food
-    Food Apple = new Food("Healthy", "And fresh");
-    Food Orange = new Food("Woop Woop", "Your health boosts");
-    Food Tee = new Food("Health boost", "Up it goes");
-    Food Bannana = new Food("Health boost", "Boost health");
+
+    Food Apple = new Food("Apple", "fresh", + 30);
+    Food Orange = new Food("Orange", "Your health boosts", 40);
+    Food Tee = new Food("Tee", "Up it goes", 20);
+    Food Bannana = new Food("Bannana", "Boost health", 50);
 
     //add food to rooms
+
     Room1.addItem(Apple);
     Room4.addItem(Orange);
     Room7.addItem(Tee);
