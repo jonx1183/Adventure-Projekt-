@@ -143,6 +143,17 @@ public class Map {
     Room5.addItem(Unholy_armor);
     Room6.addItem(Tourch);
 
+    //Food
+    Food Apple = new Food("Healthy", "And fresh");
+    Food Orange = new Food("Woop Woop", "Your health boosts");
+    Food Tee = new Food("Health boost", "Up it goes");
+    Food Bannana = new Food("Health boost", "Boost health");
+
+    //add food to rooms
+    Room1.addItem(Apple);
+    Room4.addItem(Orange);
+    Room7.addItem(Tee);
+    Room5.addItem(Bannana);
     }
 
   public Room getCurrentRoom() {

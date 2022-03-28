@@ -29,6 +29,7 @@ public class Userinterface {
       switch (choice) {
         case "Go north":
           System.out.println("You are going North" + CurrentRoom);
+          System.out.println("Your HP is: " + player1.getHealth());
           if (CurrentRoom.getNorth() != null) {
             System.out.println(newloc);
             CurrentRoom = CurrentRoom.getNorth();
@@ -38,6 +39,7 @@ public class Userinterface {
           break;
         case "Go east":
           System.out.println("You are going East" + CurrentRoom.getEast());
+          System.out.println("Your HP is: " + player1.getHealth());
           if (CurrentRoom.getEast() != null) {
             System.out.println(newloc);
             CurrentRoom = CurrentRoom.getEast();
@@ -47,6 +49,7 @@ public class Userinterface {
           break;
         case "Go south":
           System.out.println("You are going South" + CurrentRoom.getSouth());
+          System.out.println("Your HP is: " + player1.getHealth());
           if (CurrentRoom.getSouth() != null) {
             System.out.println(newloc);
             CurrentRoom = CurrentRoom.getSouth();
@@ -56,6 +59,7 @@ public class Userinterface {
           break;
         case "Go west":
           System.out.println("You are going West" + CurrentRoom.getWest());
+          System.out.println("Your HP is: " + player1.getHealth());
           if (CurrentRoom.getWest() != null) {
             System.out.println(newloc);
             CurrentRoom = CurrentRoom.getWest();
@@ -65,6 +69,7 @@ public class Userinterface {
           break;
         case "Look":
           System.out.println("You are now looking around" + CurrentRoom);
+          System.out.println("Your HP is: " + player1.getHealth());
           break;
         case "Take":
           System.out.println("What do you want to pick up: ");
