@@ -130,11 +130,11 @@ public class Map {
 
     //Create items
 
+
     Items Carrot = new Items("Carrot", "Rotten and soft");
     Items Sword = new Items("Sword", "Rusty and old");
     Items Unholy_armor = new Items("Congratulation", "You got the unholy armor");
     Items Tourch = new Items("Tourch", "Bright and light");
-
     //add items
 
     Room2.addItem(Carrot);

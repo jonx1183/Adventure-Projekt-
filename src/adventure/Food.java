@@ -6,9 +6,9 @@ public class Food extends Items {
 
   public Food(String name, String description, int HP) {
     super(name, description);
+    this.HP = HP;
 
   }
-
 
   public int setHP(int HP) {
     this.HP = HP;

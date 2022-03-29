@@ -27,6 +27,7 @@ public class Userinterface {
       switch (choice) {
         case "Go north":
           System.out.println("You are going North" + CurrentRoom);
+          System.out.println("Your HP" + player1.HP());
           if (CurrentRoom.getNorth() != null) {
             System.out.println(newloc);
             CurrentRoom = CurrentRoom.getNorth();
@@ -78,15 +79,41 @@ public class Userinterface {
           Items DropItem = CurrentRoom.removeItem(name);
           System.out.println("You have dropped" + DropItem);
           if(DropItem != null){
-            player1.removeInventory(DropItem);}
+            player1.removeInventory(DropItem);
+          }
           break;
         case "inv":
           System.out.println("You are now looking in your inventory: " + player1.getInventory());
           break;
         case "Equip":
-          System.out.println("You equiped an item");
+          System.out.println("Choose an item to equip");
+          int index0 = 0;
+          for (Items item: player1.getInventory())
+          {
+          System.out.println(index0 + ". " + item.getname());
+           index0++;
+          }
+          String input = scan.nextLine();
+          player1.Equip(player1.getInventory().get(Integer.parseInt(input)));
+          break;
         case "Heal":
+          System.out.println("Choose what to eat.");
+          int index = 0;
+          for (Items item: player1.getInventory())
+          {
+            System.out.println(index + ". " + item.getname());
+            index++;
+          }
 
+          String input2 = scan.nextLine();
+          player1.eatitem((Food) player1.getInventory().get(Integer.parseInt(input2)));
+
+          // player1.getInvwentory.Remove(item).eatiitem();
+
+          break;
+        case "HP":
+          System.out.println("Your Hp is: " + player1.HP());
+          break;
         case "Help":
           Help();
           break;

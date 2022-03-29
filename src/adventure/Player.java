@@ -15,8 +15,8 @@ public class Player {
     inventory.add(items);
 
   }
-  public void removeInventory(Items items) {
-    inventory.remove(items);
+  public void removeInventory(Items item) {
+    inventory.remove(item);
   }
 
 
@@ -24,8 +24,25 @@ public class Player {
     return HP;
   }
 
+public void eatitem(Food item) { // inventory selection "" det valgte item.
+    Heal(item.HP());
+    removeInventory(item);
+}
+
+public void Heal(int  healpowerr)
+{
+  this.HP += healpowerr;
+}
+
+public void Equip (Items items) {
+    Equip(items);
+    removeInventory(items);
+   }
+
 
 }
+
+
 
 
 
