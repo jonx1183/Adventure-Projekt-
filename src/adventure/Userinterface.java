@@ -95,7 +95,7 @@ public class Userinterface {
            index0++;
           }
           String input = scan.nextLine();
-          player1.Equip(player1.getInventory().get(Integer.parseInt(input)));
+          player1.Equip((Weapon) player1.getInventory().get(Integer.parseInt(input)));
           break;
         case "Heal":
           System.out.println("Choose what to eat.");

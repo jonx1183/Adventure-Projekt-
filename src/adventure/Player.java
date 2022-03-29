@@ -5,8 +5,10 @@ import java.util.ArrayList;
 public class Player {
 
   private int HP = 100;
+  private Weapon Equiped_weapon;
 
   private ArrayList<Items> inventory = new ArrayList<>();
+
 
   public ArrayList<Items> getInventory() {
     return inventory;
@@ -34,10 +36,10 @@ public void Heal(int  healpowerr)
   this.HP += healpowerr;
 }
 
-public void Equip (Items items) {
-    Equip(items);
-    removeInventory(items);
-   }
+public void Equip (Weapon weapon) {
+    Equiped_weapon = weapon;
+
+    }
 
 
 }
