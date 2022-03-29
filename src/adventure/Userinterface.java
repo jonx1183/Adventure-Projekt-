@@ -15,6 +15,7 @@ public class Userinterface {
     map.Rooms();
     Player player1 = new Player();
 
+
     Room CurrentRoom = map.getCurrentRoom();
 
     while (Running) {
@@ -115,7 +116,8 @@ public class Userinterface {
           System.out.println("Your Hp is: " + player1.HP());
           break;
         case "Attack":
-          System.out.println("You Attacked: " );
+          System.out.println("You Attacked: ");
+          break;
         case "Help":
           Help();
           break;

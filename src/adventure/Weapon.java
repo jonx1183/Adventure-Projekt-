@@ -10,14 +10,10 @@ public class Weapon extends Items{
 
   }
 
-  public int attack() {
+  public int Attack() {
     return Damage;
 
     }
 
-    public boolean can_Attack() {
-    return true;
-
-    }
   }
 
