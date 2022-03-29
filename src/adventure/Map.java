@@ -135,27 +135,40 @@ public class Map {
     Items Sword = new Items("Sword", "Rusty and old");
     Items Unholy_armor = new Items("Congratulation", "You got the unholy armor");
     Items Tourch = new Items("Tourch", "Bright and light");
-    //add items
 
+    //add items
     Room2.addItem(Carrot);
     Room3.addItem(Sword);
     Room5.addItem(Unholy_armor);
     Room6.addItem(Tourch);
 
     //Food
-
     Food Apple = new Food("Apple", "fresh", + 30);
     Food Orange = new Food("Orange", "Your health boosts", 40);
     Food Tee = new Food("Tee", "Up it goes", 20);
     Food Bannana = new Food("Bannana", "Boost health", 50);
 
     //add food to rooms
-
     Room1.addItem(Apple);
     Room4.addItem(Orange);
     Room7.addItem(Tee);
     Room5.addItem(Bannana);
-    }
+
+    //add rangedweapon
+    RangedWeapon Bow = new RangedWeapon("Bow", "Fast", 30, 8);
+    RangedWeapon Crossbow = new RangedWeapon("Crossbow", "Faster and stronger", 40, 4);
+
+    //add meleeweapon
+    MeleeWeapon Sword2 = new MeleeWeapon("Sword2", "Sharp", 20);
+    MeleeWeapon Knife = new MeleeWeapon("Knife", "Little and dirty", 10);
+
+    //add weapon to rooms
+    Room2.addItem(Sword2);
+    Room3.addItem(Knife);
+    Room4.addItem(Bow);
+    Room6.addItem(Crossbow);
+
+  }
 
   public Room getCurrentRoom() {
     return CurrentRoom;
