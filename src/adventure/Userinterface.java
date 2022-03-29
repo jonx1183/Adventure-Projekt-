@@ -116,7 +116,7 @@ public class Userinterface {
           System.out.println("Your Hp is: " + player1.HP());
           break;
         case "Attack":
-          System.out.println("You Attacked: ");
+          System.out.println("You have equiped: " + player1.Equiped() + "And you are ready to attack");
           break;
         case "Help":
           Help();

@@ -40,6 +40,9 @@ public void Equip (Weapon weapon) {
     Equiped_weapon = weapon;
 
     }
+    public Weapon Equiped(){
+    return Equiped_weapon;
+    }
 
 
 }

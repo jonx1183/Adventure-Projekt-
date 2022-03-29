@@ -9,6 +9,8 @@ public class RangedWeapon extends Weapon{
     this.Damage = Damage;
     this.ammo = ammo;
 
+
+
   }
 
 
