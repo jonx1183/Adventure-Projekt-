@@ -6,7 +6,7 @@ public class Player {
 
   private int HP = 100;
   private Weapon Equiped_weapon;
-  private Weapon Attack;
+
 
   private ArrayList<Items> inventory = new ArrayList<>();
 
