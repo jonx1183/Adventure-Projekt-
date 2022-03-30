@@ -7,4 +7,8 @@ public class MeleeWeapon extends Weapon {
 
   }
 
+  public int Attackmeele() {
+    return Damage;
+  }
+
 }

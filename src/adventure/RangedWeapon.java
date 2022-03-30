@@ -9,9 +9,26 @@ public class RangedWeapon extends Weapon{
     this.Damage = Damage;
     this.ammo = ammo;
 
+  }
 
+  public int AttackRanged() {
+    if(ammo >= 0) {
+      ammo--;
+      return Damage;
+    }
+
+    return 0;
+  }
+
+  public boolean Canattack() {
+    return ammo > 0;
 
   }
 
-
+  @Override
+  public String toString() {
+    return "RangedWeapon{" +
+        "ammo=" + ammo +
+        '}';
+  }
 }

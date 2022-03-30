@@ -16,6 +16,7 @@ public class Userinterface {
     Player player1 = new Player();
 
 
+
     Room CurrentRoom = map.getCurrentRoom();
 
     while (Running) {
@@ -115,8 +116,17 @@ public class Userinterface {
         case "HP":
           System.out.println("Your Hp is: " + player1.HP());
           break;
+        case "Equiped":
+          System.out.println("You have equiped: " + player1.Equiped());
+          break;
         case "Attack":
-          System.out.println("You have equiped: " + player1.Equiped() + "And you are ready to attack");
+          if(player1.Equiped() == null) {
+            System.out.println("You haven't equiped any weapon yet");
+          }
+          else if (player1.Equiped() != null)
+            System.out.println("There are no enemies in the room and you are attacking the air: ");
+          else
+            System.out.println("You have no ammo left");
           break;
         case "Help":
           Help();

@@ -6,6 +6,7 @@ public class Player {
 
   private int HP = 100;
   private Weapon Equiped_weapon;
+  private Weapon Attack;
 
   private ArrayList<Items> inventory = new ArrayList<>();
 
@@ -13,10 +14,12 @@ public class Player {
   public ArrayList<Items> getInventory() {
     return inventory;
   }
+
   public void addInventory(Items items) {
     inventory.add(items);
 
   }
+
   public void removeInventory(Items item) {
     inventory.remove(item);
   }
@@ -26,23 +29,28 @@ public class Player {
     return HP;
   }
 
-public void eatitem(Food item) { // inventory selection "" det valgte item.
+  public void eatitem(Food item) { // inventory selection "" det valgte item.
     Heal(item.HP());
     removeInventory(item);
-}
+  }
 
-public void Heal(int  healpowerr)
-{
-  this.HP += healpowerr;
-}
+  public void Heal(int healpowerr) {
+    this.HP += healpowerr;
+  }
 
-public void Equip (Weapon weapon) {
+  public void Equip(Weapon weapon) {
     Equiped_weapon = weapon;
 
-    }
-    public Weapon Equiped(){
+  }
+
+  public Weapon Equiped() {
     return Equiped_weapon;
-    }
+  }
+
+    public void Attack(){
+
+
+  }
 
 
 }
