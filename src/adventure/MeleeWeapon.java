@@ -6,8 +6,8 @@ public class MeleeWeapon extends Weapon {
     super(name, description);
 
   }
-
-  public int Attackmeele() {
+@Override
+  public int Attack() {
     return Damage;
   }
 

@@ -14,5 +14,9 @@ public abstract class Weapon extends Items{
 
     }
 
+  public boolean Canattack(){
+    return true;
   }
+
+}
 

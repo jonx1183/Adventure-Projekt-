@@ -11,7 +11,8 @@ public class RangedWeapon extends Weapon{
 
   }
 
-  public int AttackRanged() {
+@Override
+  public int Attack() {
     if(ammo >= 0) {
       ammo--;
       return Damage;
@@ -19,16 +20,12 @@ public class RangedWeapon extends Weapon{
 
     return 0;
   }
-
+@Override
   public boolean Canattack() {
     return ammo > 0;
 
   }
 
-  @Override
-  public String toString() {
-    return "RangedWeapon{" +
-        "ammo=" + ammo +
-        '}';
-  }
+
+
 }

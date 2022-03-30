@@ -15,8 +15,6 @@ public class Userinterface {
     map.Rooms();
     Player player1 = new Player();
 
-
-
     Room CurrentRoom = map.getCurrentRoom();
 
     while (Running) {
