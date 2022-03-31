@@ -34,8 +34,8 @@ public class Player {
     removeInventory(item);
   }
 
-  public void Heal(int healpowerr) {
-    this.HP += healpowerr;
+  public void Heal(int healpower) {
+    this.HP += healpower;
   }
 
   public void Equip(Weapon weapon) {

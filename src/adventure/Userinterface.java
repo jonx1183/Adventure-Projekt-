@@ -1,6 +1,5 @@
 package adventure;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Userinterface {
@@ -152,9 +151,9 @@ public class Userinterface {
     System.out.println("Equip to equip a weapon");
     System.out.println("Equiped to see equiped weapon");
     System.out.println("Attack to attack");
-    System.out.println("HP to see your corrent healthpoints");
+    System.out.println("HP to see your current health points");
     System.out.println("Heal to heal");
-    System.out.println("inv to look in your inventoryu");
+    System.out.println("inv to look in your inventory");
     System.out.println("Type 'Go north' = to go north");
     System.out.println("Type 'Go east' = to go east");
     System.out.println("Type 'Go south' = to go south");
