@@ -1,5 +1,6 @@
 package adventure;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Userinterface {
@@ -14,6 +15,8 @@ public class Userinterface {
     Map map = new Map();
     map.Rooms();
     Player player1 = new Player();
+
+
 
     Room CurrentRoom = map.getCurrentRoom();
 
@@ -63,7 +66,7 @@ public class Userinterface {
           }
           break;
         case "Look":
-          System.out.println("You are now looking around" + CurrentRoom);
+          System.out.println("You are now looking around" + CurrentRoom + '\n' + CurrentRoom.getItems());
           break;
         case "Take":
           System.out.println("What do you want to pick up: ");
@@ -146,6 +149,11 @@ public class Userinterface {
     System.out.println("Look = looking around and see if there is any items");
     System.out.println("Take = to take an item");
     System.out.println("Drop to drop an item");
+    System.out.println("Equip to equip a weapon");
+    System.out.println("Equiped to see equiped weapon");
+    System.out.println("Attack to attack");
+    System.out.println("HP to see your corrent healthpoints");
+    System.out.println("Heal to heal");
     System.out.println("inv to look in your inventoryu");
     System.out.println("Type 'Go north' = to go north");
     System.out.println("Type 'Go east' = to go east");
